@@ -25,3 +25,104 @@
     font-display: swap;
 }
 
+/* General rules */
+:root {
+    --color-black: #000;
+    --color-white: #fff;
+    --color-bg-dark: #131619;
+    --color-accent: #FDBF2D;
+    --border-radius: 30px;
+    --border: 1px solid var(--color-white);
+}
+
+html, body {
+    height: 100vh;
+}
+
+body {
+    min-width: 320px;
+    font-family: "Heebo", sans-serif;
+    font-weight: bold;
+    color: var(--color-white);
+    background-color: var(--color-bg-dark);
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+a {
+    text-decoration: none;
+    color: var(--color-white);
+    transition: all .3s;
+}
+
+a:hover,
+a.active {
+    color: var(--color-accent);
+}
+
+.wrapper {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1 1 auto;
+}
+/* General rules */
+
+/* Header */
+.header .navbar {
+    padding: 26px 32px;
+    text-transform: uppercase;
+}
+
+.header .navbar .nav-link {
+    color: var(--color-white);
+    padding-right: 30px;
+    padding-left: 30px;
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+}
+
+.header .navbar .nav-link.active::after {
+    content: "";
+    width: 5px;
+    height: 5px;
+    background-color: var(--color-white);
+    border-radius: 50%;
+}
+
+.header .navbar .nav-link.active:hover::after {
+    background-color: var(--color-accent);
+}
+
+.header .navbar .nav-link:hover  {
+    color: var(--color-accent);
+}
+
+.header .navbar a {
+    letter-spacing: 1.2px;
+    line-height: 1.5;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.header .navbar .btn-nav {
+    border-radius: var(--border-radius);
+    line-height: 2;
+    padding: 7px 26px;
+    border: var(--border);
+}
+
+.header .navbar .btn-nav:hover {
+    background-color: var(--color-accent);
+    color: var(--color-white);
+    border: 1px solid var(--color-accent);
+}
+
+/* Header */
