@@ -199,7 +199,6 @@ main {
 /* Motivation-section */
 .motivation-item {
     border: 0;
-    z-index: 2;
 }
 
 .motivation-item:nth-child(odd) {
@@ -235,7 +234,10 @@ main {
 .motivation-card-image {
     margin-block: -60px;
     display: inline-block;
-    z-index: 3;
+}
+
+.motivation-item:nth-child(odd) .motivation-card-image {
+    z-index: 2;
 }
 
 .backdrop-title {
@@ -315,6 +317,42 @@ main {
     border: 1px solid var(--color-accent);
 }
 /* Motivation-section */
+
+/* Training-types-section */
+.training-types {
+    padding: 140px 0;
+    margin-inline: auto;
+    position: relative;
+    background-color: var(--color-black);
+}
+
+.training-types-list {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 60px;
+}
+
+.training-types-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 32px;
+    background: url(../icons/transparent-arrow-bottom-left.svg) 100% 0/80px no-repeat;
+}
+
+.training-types-item img {
+    aspect-ratio: 1;
+}
+
+.training-types-item-title {
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 1.75;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+}
+/* Training-types-section */
+
 @media only screen and (max-width: 1919px) {
     .motivation-card-image {
         margin-block: -20px;
@@ -356,7 +394,5 @@ main {
 }
 
 @media only screen and (max-width: 576px) {
-    .title-medium {
-        /* font-size: 28px; */
-    }
+   
 }
